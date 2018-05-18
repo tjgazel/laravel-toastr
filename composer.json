@@ -1,0 +1,38 @@
+{
+    "name": "tjgazel/laravel-toastr",
+    "description": "Toastr notifications for laravel 5.*",
+    "keywords": ["toastr", "laravel", "notification", "php"],
+    "homepage": "https://github.com/oriceon/toastr-5-laravel",
+    "license": "MIT",
+    "type": "package",
+    "authors": [
+        {
+            "name": "Talles Gazel",
+            "email": "tjgazel@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": ">=5.0.0",
+        "illuminate/session": ">=5.0.0"
+    },
+    "autoload": {
+        "files": [
+            "helpers/helpers.php"
+        ],
+        "psr-4": {
+            "TJGazel\\Toastr\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "TJGazel\\Toastr\\ToastrServiceProvider"
+            ],
+            "aliases": {
+                "Toastr": "TJGazel\\Toastr\\Facades\\Toastr"
+            }
+        }
+    }
+}
