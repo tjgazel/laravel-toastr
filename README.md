@@ -1,18 +1,11 @@
 # Toastr notifications for laravel 5.*
 
-<p align="center">
-    <a href="#">
-        <img src="" alt="Total Downloads">
-    </a>
-    <a href="#">
-        <img src="" alt="Latest Stable Version">
-    </a>
-    <a href="#">
-        <img src="" alt="License">
-    </a>
-</p>
+[![Latest Stable Version](https://poser.pugx.org/tjgazel/laravel-toastr/v/stable)](https://packagist.org/packages/tjgazel/laravel-toastr)
+[![Latest Unstable Version](https://poser.pugx.org/tjgazel/laravel-toastr/v/unstable)](https://packagist.org/packages/tjgazel/laravel-toastr)
+[![Total Downloads](https://poser.pugx.org/tjgazel/laravel-toastr/downloads)](https://packagist.org/packages/tjgazel/laravel-toastr)
+[![License](https://poser.pugx.org/tjgazel/laravel-toastr/license)](https://packagist.org/packages/tjgazel/laravel-toastr)
 
-<p align="center"><img src="toastr.png"></p>
+<img src="toastr.png">
 
 <br>
 
@@ -175,7 +168,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use TJGazel\Toastr\Facades\Toastr;
 
-class HomeController extends Controller
+class DashboardController extends Controller
 {
 
     public function index()
