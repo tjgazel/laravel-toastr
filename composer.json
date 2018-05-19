@@ -1,7 +1,7 @@
 {
     "name": "tjgazel/laravel-toastr",
     "description": "Toastr notifications for laravel 5.*",
-    "keywords": ["toastr", "laravel", "notification", "php"],
+    "keywords": ["toastr", "laravel", "notification", "facade", "helper", "auto discover", "php"],
     "homepage": "https://github.com/tjgazel/laravel-toastr",
     "license": "MIT",
     "type": "package",
