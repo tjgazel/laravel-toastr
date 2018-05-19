@@ -1,11 +1,12 @@
 # Toastr notifications for laravel 5.*
 
-[![Latest Stable Version](https://poser.pugx.org/tjgazel/laravel-toastr/v/stable)](https://packagist.org/packages/tjgazel/laravel-toastr)
-[![Latest Unstable Version](https://poser.pugx.org/tjgazel/laravel-toastr/v/unstable)](https://packagist.org/packages/tjgazel/laravel-toastr)
-[![Total Downloads](https://poser.pugx.org/tjgazel/laravel-toastr/downloads)](https://packagist.org/packages/tjgazel/laravel-toastr)
-[![License](https://poser.pugx.org/tjgazel/laravel-toastr/license)](https://packagist.org/packages/tjgazel/laravel-toastr)
+<p align="center">
+    <a href="https://packagist.org/packages/tjgazel/laravel-toastr"><img src="https://poser.pugx.org/tjgazel/laravel-toastr/v/stable.svg"></a>
+    <a href="https://github.com/tjgazel/laravel-toastr/blob/master/LICENSE"><img src="https://poser.pugx.org/tjgazel/laravel-toastr/license.svg"></a>
+    <a href="https://packagist.org/packages/tjgazel/laravel-toastr"><img src="https://poser.pugx.org/tjgazel/laravel-toastr/d/total.svg"></a>
+</p>
 
-<img src="toastr.png">
+<p align="center"><img src="toastr.png"></p>
 
 <br>
 
@@ -70,21 +71,23 @@ composer require tjgazel/laravel-toastr
 
 `Laravel 5.5 or later` will automatically discover the provider and the alias.<br><br>
 
-**Optional:** <br>
+**Optional:** Laravel 5.4 and below <br>
 
-`Laravel 5.4 and below` add `TJGazel\Toastr\ToastrServiceProvider::class` to `providers` in `config/app.php`, and add `'Toastr' => TJGazel\Toastr\Facades\Toastr::class` to `aliases` in `config/app.php`.
+Add `TJGazel\Toastr\ToastrServiceProvider::class` to `providers` in `config/app.php`. <br>
+Add `'Toastr' => TJGazel\Toastr\Facades\Toastr::class` to `aliases` in `config/app.php`.
 <br>
 ```
 // config/app.php
-'providers' => array(
+
+'providers' => [
   // ...
   TJGazel\Toastr\ToastrServiceProvider::class,
-),
-// ...
-'aliases' => array(
+],
+
+'aliases' => [
   // ...
   'Toastr' => TJGazel\Toastr\Facades\Toastr::class,
-),
+],
 ```
 
 <br>
@@ -185,12 +188,14 @@ class DashboardController extends Controller
 You can also chain multiple messages together using:
 ```
 toastr()
-    ->error('Unauthorized access!', 'Error 401')
+    ->error('Unauthorized!', 'Error 401')
     ->info('Authentication required to access dashboard page', null, ['timeOut' => 15000]);
 
 return redirect('/login');
 ```
-<br><br>
+Note that in the `3rd parameter` you can customize `toastr options`. See the `config/toastr.php` file for all possibilities.
+
+<br>
 
 **All methods** <br>
 ```
