@@ -2,7 +2,7 @@
     "name": "tjgazel/laravel-toastr",
     "description": "Toastr notifications for laravel 5.*",
     "keywords": ["toastr", "laravel", "notification", "php"],
-    "homepage": "https://github.com/oriceon/toastr-5-laravel",
+    "homepage": "https://github.com/tjgazel/laravel-toastr",
     "license": "MIT",
     "type": "package",
     "authors": [
