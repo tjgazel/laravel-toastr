@@ -88,7 +88,7 @@ Add `'Toastr' => TJGazel\Toastr\Facades\Toastr::class` to `aliases` in `config/a
 
 <br>
 
-**2.3)** Run `php artisan vendor:publish -provider="TJGazel\Toastr\ToastrServiceProvider"`
+**2.3)** Run `php artisan vendor:publish --provider="TJGazel\Toastr\ToastrServiceProvider"`
 to publish the config file in `config/toastr.php`
 
 <br>
