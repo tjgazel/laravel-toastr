@@ -1,12 +1,9 @@
 # Toastr notifications for laravel 5.*
+[![Latest Stable Version](https://poser.pugx.org/tjgazel/laravel-toastr/v/stable)](https://packagist.org/packages/tjgazel/laravel-toastr)
+[![License](https://poser.pugx.org/tjgazel/laravel-toastr/license)](https://github.com/tjgazel/laravel-toastr/blob/master/LICENSE)
+[![Total Downloads](https://poser.pugx.org/tjgazel/laravel-toastr/downloads)](https://packagist.org/packages/tjgazel/laravel-toastr)
 
-<p align="center">
-    <a href="https://packagist.org/packages/tjgazel/laravel-toastr"><img src="https://poser.pugx.org/tjgazel/laravel-toastr/v/stable.svg"></a>
-    <a href="https://github.com/tjgazel/laravel-toastr/blob/master/LICENSE"><img src="https://poser.pugx.org/tjgazel/laravel-toastr/license.svg"></a>
-    <a href="https://packagist.org/packages/tjgazel/laravel-toastr"><img src="https://poser.pugx.org/tjgazel/laravel-toastr/d/total.svg"></a>
-</p>
-
-<p align="center"><img src="toastr.png"></p>
+<img src="toastr.png">
 
 <br>
 
@@ -14,21 +11,26 @@
 - [Usage](#usage)
 - [Tanks](#tanks)
 
+**Other packages:**
+- [tjgazel/laravel-bs4-alert](https://github.com/tjgazel/laravel-bs4-alert) - Bootstrap 4 alerts for laravel 5.* <br>
+- [tjgazel/laravel-bs3-alert](https://github.com/tjgazel/laravel-bs3-alert) - Bootstrap 3 alerts for laravel 5.*
+
 <br>
 
 <a name="instalation"></a>
+
 ## Installation
 
-#### 1. Install the Toastr library (front end dependency)
+### 1) Install the Toastr library (front end dependency)
 
-Install [Toastr](http://codeseven.github.io/toastr/) via npm . [Github](https://github.com/CodeSeven/toastr) | [Demo](http://codeseven.github.io/toastr/demo.html)
+**1.1)** Install [Toastr](http://codeseven.github.io/toastr/) via npm . [Github](https://github.com/CodeSeven/toastr) | [Demo](http://codeseven.github.io/toastr/demo.html)
 ```
 npm install toastr --save-dev
 ```
 
 <br>
 
-Require the js in resources/assets/js/bootstrap.js as `window.toastr = require('toastr');`
+**1.2)** Require the js in resources/assets/js/bootstrap.js as `window.toastr = require('toastr');`
 
 ```
 try {
@@ -43,7 +45,7 @@ try {
 
 <br>
 
-Import the sass in resources/assets/sass/app.scss as `@import "~toastr/toastr";` then build via npm `npm run prod`.
+**1.3)** Import the sass in resources/assets/sass/app.scss as `@import "~toastr/toastr";` then build via npm `npm run prod`.
 ```
 // Fonts
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700");
@@ -60,22 +62,16 @@ Import the sass in resources/assets/sass/app.scss as `@import "~toastr/toastr";`
 
 <br><br>
 
-#### 2. Install tjgazel/laravel-toastr
+### 2) Install tjgazel/laravel-toastr
 
-Install via composer
-```
-composer require tjgazel/laravel-toastr
-```
+**2.1)** Run `composer require tjgazel/laravel-toastr` to include this in your project.<br>
+`Laravel 5.5 or later` will automatically discover the provider and the alias.
 
 <br>
 
-`Laravel 5.5 or later` will automatically discover the provider and the alias.<br><br>
-
-**Optional:** Laravel 5.4 and below <br>
-
+**2.2)** *Optional:* Laravel 5.4 and below <br>
 Add `TJGazel\Toastr\ToastrServiceProvider::class` to `providers` in `config/app.php`. <br>
-Add `'Toastr' => TJGazel\Toastr\Facades\Toastr::class` to `aliases` in `config/app.php`.
-<br>
+Add `'Toastr' => TJGazel\Toastr\Facades\Toastr::class` to `aliases` in `config/app.php`. <br>
 ```
 // config/app.php
 
@@ -92,15 +88,12 @@ Add `'Toastr' => TJGazel\Toastr\Facades\Toastr::class` to `aliases` in `config/a
 
 <br>
 
-Run
-```
-php artisan vendor:publish --provider="TJGazel\Toastr\ToastrServiceProvider"
-```
-to publish the config file.
+**2.3)** Run `php artisan vendor:publish -provider="TJGazel\Toastr\ToastrServiceProvider"`
+to publish the config file in `config/toastr.php`
 
 <br>
 
-Add `{!! Toastr::render() !!}` Facade or `{!! toastr()->render() !!}` helper in your main view.
+**2.4)** Add `{!! Toastr::render() !!}` Facade or `{!! toastr()->render() !!}` helper in your main view.
 ```
 <!DOCTYPE html>
 <html>
@@ -118,9 +111,7 @@ Add `{!! Toastr::render() !!}` Facade or `{!! toastr()->render() !!}` helper in 
 
 <br>
 
-**Optional:** <br>
-Modify the publish configuration file locate at `config/toastr.php` to your liking.
-
+**2.5)** *Optional:* Modify the publish configuration file locate at `config/toastr.php` to your liking.
 ```
 <?php
 
@@ -151,6 +142,7 @@ return [
 <br><br>
 
 <a name="usage"></a>
+
 ## Usage
 
 Use the Toastr facade `Toastr::` or the helper function `toast()->` to access the methods in this package.
@@ -190,8 +182,6 @@ You can also chain multiple messages together using:
 toastr()
     ->error('Unauthorized!', 'Error 401')
     ->info('Authentication required to access dashboard page', null, ['timeOut' => 15000]);
-
-return redirect('/login');
 ```
 Note that in the `3rd parameter` you can customize `toastr options`. See the `config/toastr.php` file for all possibilities.
 
@@ -207,6 +197,7 @@ toastr()->error();
 <br>
 
 <a name="tanks"></a>
+
 ### Tanks for:
 [Toastr](http://codeseven.github.io/toastr/) <br>
 [Laravel](https://laravel.com/)
