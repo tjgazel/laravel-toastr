@@ -10,6 +10,7 @@
 - [Instalation](#instalation)
 - [Usage](#usage)
 - [Tanks](#tanks)
+- [Tutorial video](#tutorial)
 
 **Other packages:**
 - [tjgazel/laravel-bs4-alert](https://github.com/tjgazel/laravel-bs4-alert) - Bootstrap 4 alerts for laravel 5.* <br>
@@ -205,3 +206,7 @@ toastr()->error();
 **Author:** Talles Gazel <br>
 [Home page](https://tjgweb.com.br/) <br>
 [Facebook](https://www.facebook.com/talles.gazel) <br>
+
+
+<a name="tutorial"></a>
+[![Tutorial video](https://img.youtube.com/vi/_6Uu76LqGds/0.jpg)](https://www.youtube.com/watch?v=_6Uu76LqGds)
