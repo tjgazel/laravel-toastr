@@ -36,6 +36,8 @@ class ToastrServiceProvider extends ServiceProvider
         $this->app->singleton(Toastr::class, function ($app) {
             return new Toastr($app['session'], $app['config']);
         });
+
+        $this->mergeConfigFrom(__DIR__ . '/../config/config.php', 'toastr');
     }
 
     /**
