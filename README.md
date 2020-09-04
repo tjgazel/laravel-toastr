@@ -1,4 +1,4 @@
-# Toastr notifications for laravel 5.\*
+# Toastr notifications for laravel 5.5+, 6 e 7
 
 [![Latest Stable Version](https://poser.pugx.org/tjgazel/laravel-toastr/v/stable)](https://packagist.org/packages/tjgazel/laravel-toastr)
 [![License](https://poser.pugx.org/tjgazel/laravel-toastr/license)](https://github.com/tjgazel/laravel-toastr/blob/master/LICENSE)
